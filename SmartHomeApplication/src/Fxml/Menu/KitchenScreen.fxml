@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2196f3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KitchenScreenController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="700.0" style="-fx-background-color: #2196f3;">
+         <children>
+            <Label text="Kuchnia" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" glyphName="UNDO" onMouseClicked="#backToMenu" size="2.5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+         </children>
+      </HBox>
+      <ScrollPane prefHeight="430.0" prefWidth="700.0" vvalue="1.0">
+         <content>
+            <Pane prefHeight="614.0" prefWidth="684.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="195.0" prefWidth="596.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="195.0" prefWidth="199.0">
+                           <children>
+                              <ImageView fitHeight="132.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:resources/bulb.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="24.0" prefWidth="164.0" text="Oświetlenie kuchni">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="191.0" prefWidth="398.0" spacing="10.0">
+                           <children>
+                              <Label text="Intensywność">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="18.0" prefWidth="393.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="valueLightSlider" prefHeight="18.0" prefWidth="29.0" text="0" />
+                                    <Slider fx:id="lightSlider" blockIncrement="1.0" prefHeight="18.0" prefWidth="306.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="33.0" text="100">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="30.0" layoutY="10.0" text="Włącznik/Wyłącznik">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="30.0" layoutY="36.0" prefHeight="16.0" prefWidth="380.0" spacing="15.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                       <children>
+                                          <RadioButton fx:id="enableLight" mnemonicParsing="false" text="Włącz">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="light" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="disableLight" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Wyłącz" toggleGroup="$light" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#saveLight" text="Zapisz">
+                                 <VBox.margin>
+                                    <Insets left="150.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Line endX="684.0" endY="220.00001525878906" startX="-1.0" startY="220.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="6.0" layoutY="221.0" prefHeight="195.0" prefWidth="596.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="195.0" prefWidth="199.0">
+                           <children>
+                              <ImageView fitHeight="132.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:resources/temperature.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="24.0" prefWidth="164.0" text="Temperatura w kuchni">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="191.0" prefWidth="398.0" spacing="10.0">
+                           <children>
+                              <Label text="Temperatura">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="18.0" prefWidth="393.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="valueTemperatureSlider" prefHeight="18.0" prefWidth="29.0" text="15" />
+                                    <Slider fx:id="temperatureSlider" blockIncrement="1.0" max="30.0" min="15.0" prefHeight="18.0" prefWidth="306.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="33.0" text="30">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#saveTemperature" text="Zapisz">
+                                 <VBox.margin>
+                                    <Insets left="150.0" top="70.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Line endX="674.0" endY="416.79998779296875" layoutX="10.0" layoutY="10.0" startX="-10.000005722045898" startY="416.79998779296875" />
+                  <HBox alignment="CENTER_LEFT" layoutY="426.0" prefHeight="195.0" prefWidth="596.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="195.0" prefWidth="199.0">
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:resources/fridge.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="24.0" prefWidth="164.0" text="Lodówka">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="191.0" prefWidth="398.0" spacing="10.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="10.0" text="Włącznik/Wyłącznik">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="15.0" />
+                                 </padding>
+                              </Label>
+                              <HBox layoutX="30.0" layoutY="36.0" prefHeight="16.0" prefWidth="380.0" spacing="15.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Włącz">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="fridge" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Wyłącz" toggleGroup="$fridge" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#saveFridge" text="Zapisz">
+                                 <VBox.margin>
+                                    <Insets left="150.0" top="50.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

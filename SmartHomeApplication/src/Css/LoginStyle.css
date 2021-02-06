@@ -1,0 +1,42 @@
+.parent{
+    -fx-background-color:transparent;
+}
+.pane{
+    -fx-background-color: #2196f3;
+}
+.register-btn
+{
+    -fx-background-color:transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: whitesmoke;
+}
+
+.panel
+{
+    -fx-background-color: #ffffff;
+}
+.blue-panel
+{
+    -fx-background-color: #151928;
+}
+
+.tf_box
+{
+    -fx-background-color: transparent;
+    -fx-border-color: #DEDEE4;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.tf_box{
+    -fx-background-color:transparent;
+}
+
+.blue-btn{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 5px;
+    ifx-text-fill: #ffffff;
+}

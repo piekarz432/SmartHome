@@ -1,0 +1,18 @@
+.pane{
+    -fx-background-color: #2196f3;
+}
+.button{
+    -fx-color:  #4383af;
+    -fx-border-color: #c2e6ef;
+    -fx-border-radius: 0.1em;
+}
+.label{
+    -fx-color: #2196f3;
+
+}
+.textArea{
+    -fx-color: #ff0000;
+    -fx-background-color: #ff0000f3;
+    color: #ff0000;
+
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuScreenController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: #151928;;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" stylesheets="@../../Css/MenuStyle.css">
+               <children>
+                  <ToggleButton fx:id="temperature" mnemonicParsing="false" onAction="#openKitchen" prefHeight="96.0" prefWidth="147.5" styleClass="button" text="Kuchnia" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" onAction="#openRoom" prefHeight="96.0" prefWidth="147.5" styleClass="button" text="Pokój" textAlignment="CENTER" toggleGroup="$toggleGroup" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ToggleButton>
+                  <ToggleButton mnemonicParsing="false" onAction="#openBathroom" prefHeight="96.0" prefWidth="147.5" styleClass="button" text="Łazienka" textAlignment="CENTER" toggleGroup="$toggleGroup" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ToggleButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <ToggleButton mnemonicParsing="false" onAction="#openFaults" prefHeight="96.0" prefWidth="147.5" text="Usterki" textAlignment="CENTER" toggleGroup="$toggleGroup" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ToggleButton>
+                  <ToggleButton mnemonicParsing="false" onAction="#openWindowsAndDoors" prefHeight="96.0" prefWidth="147.5" text="Sterowanie oknami i drzwiami" textAlignment="CENTER" textOverrun="CLIP" toggleGroup="$toggleGroup" wrapText="true" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ToggleButton>
+               </children>
+            </HBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <padding>
+            <Insets top="150.0" />
+         </padding>
+      </VBox>
+      <FontAwesomeIcon fill="WHITE" glyphName="TIMES" layoutX="650.0" layoutY="40.0" onMouseClicked="#OnExit" size="3em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="580.0" layoutY="40.0" onMouseClicked="#openScreenHome" size="3em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <VBox fx:id="vbox" prefHeight="300.0" prefWidth="210.0" style="-fx-background-color: #ffffff;" visible="false" />
+   </children>
+</Pane>
